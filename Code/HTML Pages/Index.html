@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Manager</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../CSS/MainCSS.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/IndexCSS.css">
+        <script src="https://kit.fontawesome.com/ec00a021e5.js" crossorigin="anonymous"></script>
+    </head>
+    <div class="main">
+        <div class="header">
+            <div class="header-name">
+                <img src="../Images/logo_light.png" alt="Logo" id="logo-image">
+            </div>
+            <div class="topnav" id="navbar">
+                <a href="../HTML Pages/Index.html" id="home-tab" class="nav-item"><i class=" itemIcon fas fa-home"></i>Home</a>
+                <a href="../HTML Pages/TaskList.html" id="task-tab" class="nav-item"><i class=" itemIcon fas fa-tasks"></i>Task List</a>
+                <a href="../HTML Pages/NotificationPage.html" class="nav-item"><i class=" itemIcon fas fa-bell"></i>Notification</a>
+                <a href="../HTML Pages/ProfilePage.html" class="nav-item"><i class=" itemIcon fas fa-user"></i>Profile</a>
+                <a href="../HTML Pages/SettingsPage.html" class="nav-item"><i class=" itemIcon fas fa-cog"></i>Settings</a>
+                <a href="../HTML Pages/LoginPage.html" class="nav-item" id="nav-login">Login</a>
+                <a href="javascript:void(0)" class="icon" onclick="navhamburger()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="layout">
+            <div class="about-us">
+                <h2 class="hompageHeadings">What is taskescape?</h2>
+                <p class="homepageText">
+                    A web based task manager to help users to keep track of their tasks. You will be able to manage your tasks in 2 different categories, personal and work.
+                    You will be abled to view all tasks in 2 different views, list and board view. With this system you will be able to keep track of all your tasks with ease. Moreover, You will be notified about tasks that are due in less then a week.
+                </p>
+            </div>
+            <div class="guide">
+                <h2 class="hompageHeadings">Guide to using taskescape</h2>
+                <h3 class ="subHeadings">Create a task</h3>
+                <ul class="homepageText">
+                    <li>Navigate to the task list page using the top nav bar.</li>
+                    <li>Click on the category button you want to create a new task in.</li>
+                    <li>Select 'Upcoming' from the drop list.</li>
+                    <li>Click the 'Create Task' button, located in the top right</li>
+                    <li>Fill out the form</li>
+                    <li>To finish creating click submit task</li>
+                </ul>
+                <h3 class ="subHeadings">Edit a task</h3>
+                <ul class="homepageText">
+                    <li>To edit a task click the 'Edit' button, located on each task in the Upcoming section</li>
+                    <li>A prefiled form wil be displayed, correct the details</li>
+                    <li>To finish editing, click the submit button</li>
+                </ul>
+                <h3 class ="subHeadings">Mark as done</h3>
+                <ul class="homepageText">
+                    <li>Marking a task as completed can be done by clicking the 'Done' button located on each task in the Upcoming section</li>
+                    <li>To view the compeleted tasks, using the category button select 'Done' from the drop lists</li>
+                    <li>All completed task will be shown in the Done section</li>
+                </ul class="homepageText">
+                <h3 class ="subHeadings">Delete a task</h3>
+                <ul class="homepageText">
+                    <li>To delete a task navigate to the done section</li>
+                    <li>Click the 'Delete' button</li>
+                </ul>
+               
+            </div>
+            
+        </div>
+        
+    </div>
+  
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../JavaScript/NavJS.js"></script>
+        <script src="../JavaScript/IndexJS.js"></script>
+    </body>
+</html>

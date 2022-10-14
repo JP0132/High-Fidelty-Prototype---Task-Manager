@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root{
+    --Charlotte: #B6EEF8;
+    --Alabaster: #FCFCFC;
+    --Razzmatazz: #DE024F;
+    --FrenchRose: #F0417C;
+    --Foam: #D7F6FC;
+    --JaggedIce:#C0E2E9;
+    --Blush: #B9437B;
+    --Amour: #F5DFEA;
+    --CeriseRed:#E53672;
+    --BlackPearl: #061631;
+    --Spray: #88dfee;
+    --Iceberg: #CDEAEF;
+  
+  
+    --Bordeaux: #a61b37;
+    --Rose: #ff0266;
+    --Rose60: #d6014f;
+    --EasternBlue: #1E81B0;
+    --Glacier: #76B5C5;
+  
+    --DarkGrey: #121212;
+    --Grey: #242424;
+    --LimedSpruce: #364A4A;
+    --GreenWaterloo: #101405;
+    --DarkGrey16: #373737;
+  
+    --shadow: #00000033;
+  
+    
+}
+  
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/*Sets up the layout of the page*/
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+/*The layout of the page after the header*/
+.layout{
+  background-color: var(--Alabaster);
+  flex-grow : 1;
+  margin-top: 300px;
+}
+
+.login{
+    display: grid;
+    grid-template-columns: 100%;
+    box-sizing: border-box;
+    width: 400px;
+    margin: auto;
+}
+
+.login_content{
+    display: grid;
+    box-sizing: border-box;
+}
+
+.login-container{
+    position: relative;
+    box-sizing: border-box;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.login-form{
+    width: 100%;
+    background-color:var(--Glacier);
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 20px #090909;
+    position: absolute;
+    bottom: 4rem;
+}
+
+.login-title{
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.login-box{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: .5rem;
+    padding: 20px 10px;
+    background-color: var(--Charlotte);
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+.login-icon{
+    font-size: 1rem;
+    color: var(--EasternBlue);
+}
+
+.login-input{
+    background-color: var(--Charlotte);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: none;  
+}
+
+.login-input::placeholder{
+    font-family: 'poppins', sans-serif;
+}
+
+.login-button{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    margin: 2rem 0;
+    background-color: var(--EasternBlue);
+    font-weight: 600;
+    text-align: center;
+    border-radius: .5rem;
+    color: var(--Alabaster);
+    transition: .3s;
+    width: 100%;
+}

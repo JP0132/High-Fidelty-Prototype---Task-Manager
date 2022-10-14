@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+:root{
+    --Charlotte: #B6EEF8;
+    --Alabaster: #FCFCFC;
+    --Razzmatazz: #DE024F;
+    --FrenchRose: #F0417C;
+    --Foam: #D7F6FC;
+    --JaggedIce:#C0E2E9;
+    --Blush: #B9437B;
+    --Amour: #F5DFEA;
+    --CeriseRed:#E53672;
+    --BlackPearl: #061631;
+    --Spray: #88dfee;
+    --Iceberg: #CDEAEF;
+
+
+    --Bordeaux: #a61b37;
+    --Rose: #ff0266;
+    --Rose60: #d6014f;
+    --EasternBlue: #1E81B0;
+    --Glacier: #76B5C5;
+
+    --DarkGrey: #121212;
+    --Grey: #242424;
+    --LimedSpruce: #364A4A;
+    --GreenWaterloo: #101405;
+
+    --shadow: #00000033;
+
+    
+}
+
+.light-theme{
+    --mainBG1: var(--Foam);
+    --mainBG2: var(--Alabaster);
+    --textColour: var(--DarkGrey);
+    --headingColour: var(--Razzmatazz);
+    --subHeadingColour: var(--Blush);
+}
+
+.dark-theme{
+    --mainBG2: var(--DarkGrey);
+    --textColour: var(--Alabaster);
+    --headingColour: var(--Rose);
+    --subHeadingColour: var(--FrenchRose);
+  
+
+}
+
+/*Sets the size of the page*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/*Sets up the layout of the page*/
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+/*The layout of the page after the header*/
+.layout{
+  background: var(--mainBG2);
+  flex-grow : 1;
+  margin-top: 153px !important;
+}
+.about-us{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+
+}
+.guide{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 3%;
+
+}
+
+.hompageHeadings{
+    color: var(--headingColour);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.homepageText{
+    color: var(--textColour);
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+
+.subHeadings{
+    color: var(--subHeadingColour);
+    font-weight: 600;
+}

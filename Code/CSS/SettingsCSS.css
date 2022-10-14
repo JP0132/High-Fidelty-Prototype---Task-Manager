@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root{
+    --Charlotte: #B6EEF8;
+    --Alabaster: #FCFCFC;
+    --Razzmatazz: #DE024F;
+    --FrenchRose: #F0417C;
+    --Foam: #D7F6FC;
+    --JaggedIce:#C0E2E9;
+    --Blush: #B9437B;
+    --Amour: #F5DFEA;
+    --CeriseRed:#E53672;
+    --BlackPearl: #061631;
+    --Spray: #88dfee;
+    --Iceberg: #CDEAEF;
+
+
+    --Bordeaux: #a61b37;
+    --Rose: #ff0266;
+    --Rose60: #d6014f;
+    --EasternBlue: #1E81B0;
+    --Glacier: #76B5C5;
+
+    --DarkGrey: #121212;
+    --Grey: #242424;
+    --LimedSpruce: #364A4A;
+    --GreenWaterloo: #101405; 
+
+    --oneeighty: 180deg;
+    --zero: 0deg;
+
+
+
+}
+
+.light-theme{
+    --mainBG:var(--Alabaster);
+    --headingsText: var(--DarkGrey);
+    --contrastColour: var(--DarkGrey);
+    --rotateIcon: var(--oneeighty);
+    --enablerBtn: var(--Glacier);
+    --enablerBtnText: var(--Alabaster);
+    --twoFAText: var(--DarkGrey);
+    --inputLabel: var(--DarkGrey);
+    --editTitle: var(--DarkGrey);
+    --ldText: var(--DarkGrey);
+    
+
+}
+
+.dark-theme{
+    --mainBG:var(--DarkGrey);
+    --headingsText: var(--Alabaster);
+    --contrastColour: var(--Alabaster);
+    --rotateIcon: var(--zero);
+    --enablerBtn: var(--Alabaster);
+    --enablerBtnText: var(--DarkGrey);
+    --twoFAText: var(--Alabaster);
+    --inputLabel: var(--Alabaster);
+    --editTitle: var(--Alabaster);
+    --ldText: var(--Alabaster);
+
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/*Sets up the layout of the page*/
+.main {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.layout{
+    background-color: var(--mainBG);
+    flex-grow : 1;
+    margin-top: 153px;
+}
+
+.account-settings{
+    width: 100%;
+}
+
+.FA-switch-container{
+    float: left;
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+
+.FA-switch{
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+}
+
+.FA-switch input{
+    display: none;
+}
+
+.fa-slider{
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1E81B0;
+    -webkit-transition: .4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.fa-slider:before{
+    position:absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: 4px;
+    left: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+#fa-toggle:checked + .fa-slider{
+    background-color: #2ab934;
+}
+
+#fa-toggle:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+#fa-toggle:checked + .fa-slider::before{
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+}
+
+.fa-slider:after{
+    content:'OFF';
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+
+}
+
+input:checked + .fa-slider:after
+{  
+  content:'ON';
+}
+
+
+.FA{
+    display: block;
+    
+
+}
+.FA-top{
+    display: block;
+    font-family: "Raleway";
+    color: var(--twoFAText);
+}
+
+#TwoFA{
+    float: left;
+   
+}
+#enabler{
+    margin-left: 5px;
+    background-color: var(--enablerBtn);
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    color: var(--enablerBtnText);
+}
+
+#FA-text{
+    margin-top: 20px;
+
+}
+
+.account-label{
+    display: block;
+}
+
+#account-phone{
+    display: block;
+}
+
+.edit-title{
+    margin-top: 50px;
+    text-align: center;
+    color: var(--editTitle);
+}
+
+.edit-grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    width: 80%;
+    grid-gap: 20px;
+    margin-left: 150px;
+}
+
+
+.form-group{
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block; 
+}
+
+.form-label{
+    color:var(--inputLabel);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    max-width: 100%;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.form-in{
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    border: 2px solid #e9e9e9;
+    box-sizing: border-box;
+}
+
+
+
+.theme-settings{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.settingHeadings{
+    color: var(--headingsText);
+    text-align: center;
+}
+
+.lightdarktheme-container{
+    margin-left: 150px;
+}
+#ld-text{
+    color: var(--ldText);
+}
+#fontFamilyText{
+    color: var(--ldText);
+}
+
+
+
+#switch-container{
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+}
+
+.fa-adjust{
+    transform: rotate(var(--rotateIcon));
+    font-size: 30px;
+    margin-right: 5px;
+    color: var(--contrastColour);
+}
+
+
+.switch input{
+    display: none;
+}
+.slider{
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1E81B0;
+    -webkit-transition: .4s;
+    transition: 0.4s;
+    border-radius: 34px
+
+}
+
+.slider:before{
+    position:absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: 4px;
+    left: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: 0.4s;
+    border-radius: 50%;
+
+}
+
+
+#theme-input:checked + .slider{
+    background-color: #2ab934;
+}
+
+#theme-input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+#theme-input:checked + .slider::before{
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+}
+
+.slider:after{
+    color: white;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+}
+
+.font-family-container{
+    margin-bottom: 50px;
+    text-align: center;
+}
+  

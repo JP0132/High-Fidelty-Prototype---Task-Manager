@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../CSS/MainCSS.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/TaskListCSS.css">
+        <script src="https://kit.fontawesome.com/ec00a021e5.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="light-theme">
+        <div class="popup-overlay" id="overlay-window"></div>
+
+        <div class="main">
+            <div class="header">
+                <div class="header-name">
+                    <img src="../Images/logo_light.png" alt="Logo" id="logo-image">
+                </div>
+                <div class="topnav" id="navbar">
+                    <a href="../HTML Pages/Index.html" id="home-tab" class="nav-item"><i class=" itemIcon fas fa-home"></i>Home</a>
+                    <a href="../HTML Pages/TaskList.html" id="task-tab" class="nav-item"><i class=" itemIcon fas fa-tasks"></i>Task List</a>
+                    <a href="../HTML Pages/NotificationPage.html" class="nav-item"><i class=" itemIcon fas fa-bell"></i>Notification</a>
+                    <a href="../HTML Pages/ProfilePage.html" class="nav-item"><i class=" itemIcon fas fa-user"></i>Profile</a>
+                    <a href="../HTML Pages/SettingsPage.html" class="nav-item"><i class=" itemIcon fas fa-cog"></i>Settings</a>
+                    <a href="../HTML Pages/LoginPage.html" class="nav-item" id="nav-login">Login</a>
+                    <a href="javascript:void(0)" class="icon" onclick="navhamburger()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+
+
+                </div>
+           
+                
+               
+            </div>
+    
+            <div class="layout">
+                <div class="task-category">
+                    <div id="container-title">
+                        <h1 class="homepage-title">Task List</h1>
+                    </div>    
+                    <div class="category-container">
+                        <div class="btn-group dropright cat" id="personal-category">
+                            <button type="button" class="btn dropdown-toggle category-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Personal
+                            </button>
+                            <div class="dropdown-menu">
+                                <a id="upcoming-option" class="dropdown-item" href="#">Upcoming</a>
+                                <a id="done-option" class="dropdown-item" href="#">Done</a>
+                                <!-- Dropdown menu links -->
+                            </div>
+                        </div>
+                        <div class="btn-group dropright cat" id="work-category">
+                            <button type="button" class="btn dropdown-toggle category-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Work
+                            </button>
+                            <div class="dropdown-menu">
+                                <a id="work-upcoming-option" class="dropdown-item" href="#">Upcoming</a>
+                                <a id="work-done-option" class="dropdown-item" href="#">Done</a>
+                                <!-- Dropdown menu links -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tasklist-main">
+                    <div class="task-view">
+                        <button id="board-view" class="change-view">Board</button>
+                        <button id="list-view"  class="change-view">List</button>
+                    </div>
+
+                     <!-- Board View -->
+                    <div class="board-view-container">
+                         <!-- Upcoming tasks personal -->
+                        <div id="upcoming-tasks" class="none">
+                            <h1 class="section-title">Personal Upcoming</h1>
+                            <div class="button-container">
+                                <button class="create-task" onclick="openCreateTaskForm('1','personal')">Create Task</button>
+                            </div>
+                            <div id="popupconB"></div>
+                            <div class="board-tasks" id="upcoming-board"></div>
+                        </div>
+
+                        <!-- Upcoming tasks work -->
+                        <div id="work-upcoming-tasks" class="none">
+                            <h1 class="section-title">Work Upcoming</h1>
+                            <div class="button-container">
+                                <button class="create-task" onclick="openCreateTaskForm('2','work')">Create Task</button>
+                            </div>
+                            <div id="work-popupconB"></div>
+                            <div class="board-tasks" id="work-upcoming-board"></div>
+                        </div>
+                        <!-- Done tasks personal -->
+                        <div id="done-tasks" class="none">
+                            <h1 class="section-title">Personal Done</h1>
+                            <div class="board-tasks" id="done-board"></div>
+                        </div>
+
+                        <!-- Done tasks work -->
+                        <div id="work-done-tasks" class="none">
+                            <h1 class="section-title">Work Done</h1>
+                            <div class="board-tasks" id="work-done-board"></div>
+                        </div>
+
+                    </div>
+    
+                    <div class="list-view-container">
+
+                        <!-- Upcoming tasks list personal -->
+                        <div id="list-upcoming-tasks" class="none">
+                            <h1 class="section-title">Personal Upcoming</h1>
+                            <div class="button-container">
+                                <button class="create-task" onclick="openCreateTaskForm('3','personal')">Create Task</button>
+                            </div>
+                            <div id="popupcon"></div>
+                            <ul class="todo-list js-todo-list" id="upcoming-list"></ul>
+                          
+                        </div>
+
+                        <!-- Upcoming tasks list work -->
+                        <div id="work-list-upcoming-tasks" class="none">
+                            <h1 class="section-title">Work Upcoming</h1>
+                            <div class="button-container">
+                                <button class="create-task" onclick="openCreateTaskForm('4','work')">Create Task</button>
+                            </div>
+                            <div id="work-popupcon"></div>
+                           
+                            <ul class="todo-list js-todo-list" id="work-upcoming-list"></ul>
+                        </div>
+
+                        <!-- Done tasks list personal -->
+                        <div id="list-done-tasks" class="none">
+                            <h1 class="section-title">Personal Done</h1>
+                            <ul class="todo-list done-todo-list" id="done-list"></ul>
+                        </div> 
+
+                        <!-- Done tasks list work -->
+                        <div id="work-list-done-tasks" class="none">
+                            <h1 class="section-title">Work Done</h1>
+                            <ul class="todo-list done-todo-list" id="work-done-list"></ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+      
+     
+
+     
+   
+        
+      
+        
+
+            
+
+  
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../JavaScript/NavJS.js"></script>
+        <script src="../JavaScript/TaskListJS.js"></script>
+        
+
+    </body>
+</html>

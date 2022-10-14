@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root{
+  --Charlotte: #B6EEF8;
+  --Alabaster: #FCFCFC;
+  --Razzmatazz: #DE024F;
+  --FrenchRose: #F0417C;
+  --Foam: #D7F6FC;
+  --JaggedIce:#C0E2E9;
+  --Blush: #B9437B;
+  --Amour: #F5DFEA;
+  --CeriseRed:#E53672;
+  --BlackPearl: #061631;
+  --Spray: #88dfee;
+  --Iceberg: #CDEAEF;
+
+
+  --Bordeaux: #a61b37;
+  --Rose: #ff0266;
+  --Rose60: #d6014f;
+  --EasternBlue: #1E81B0;
+  --Glacier: #76B5C5;
+
+  --DarkGrey: #121212;
+  --Grey: #242424;
+  --LimedSpruce: #364A4A;
+  --GreenWaterloo: #101405;
+  --DarkGrey16: #373737;
+
+  --shadow: #00000033;
+
+  
+}
+
+.light-theme{
+  --mainBG2: var(--Alabaster);
+  --headerColour: var(--Charlotte);
+  --usernameText: var(--DarkGrey);
+  --inputLabelColour: var(--CeriseRed);
+  --inputBG: var(--Foam);
+  --inputBorder: var(--EasternBlue);
+  --submitButton: var(--EasternBlue);
+  --submitButtonText: var(--Alabaster);
+
+  --headingTextColour: var(--Razzmatazz);
+
+ 
+}
+
+.dark-theme{
+  --mainBG2: var(--DarkGrey);
+  --headerColour: var(--DarkGrey16);
+  --usernameText: var(--Alabaster);
+  --inputLabelColour: var(--Alabaster);
+  --inputBG: var(--Alabaster);
+  --inputBorder: var(--DarkGrey16);
+  --submitButton: var(--EasternBlue);
+  --submitButtonText: var(--Alabaster);
+  --headingTextColour: var(--Razzmatazz);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/*Sets up the layout of the page*/
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: var(--mainBG2);
+}
+
+/*The layout of the page after the header*/
+.layout{
+  background-color: var(--mainBG2);
+  flex-grow : 1;
+  margin-top: 200px;
+}
+
+.profileHeader{
+    background-color: var(--headerColour);
+    width: 100%;
+    height: 90px;
+    position: relative;
+    box-shadow: 0px 3px 4px #4b4a4a;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+   
+}
+
+
+#username {
+    font-size: 32px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-top: 22.5px;
+    padding-left: 30px;
+    color: var(--usernameText);
+    
+}
+
+.save-details{
+  float: right;
+  margin-right: 10px;
+  background-color: var(--submitButton);
+  color: var(--submitButtonText);
+  width: 90px;
+  height: 50px;
+  border-radius: 10%;
+  cursor: pointer;
+  border: none;
+  font-family: 'poppins', sans-serif;
+  font-size: 30px;
+}
+
+
+.edit-title{
+    margin-top: 50px;
+    text-align: center;
+    color: var(--headingTextColour);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.edit-grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    width: 80%;
+    grid-gap: 20px;
+    margin-left: 150px;
+}
+
+
+.form-group{
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block; 
+}
+
+.form-label{
+    color:var(--inputLabelColour);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 100%;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.form-in{
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    background-color: var(--inputBG);
+    border: 2px solid var(--inputBorder);
+    box-sizing: border-box;
+}
+
+
+
+  

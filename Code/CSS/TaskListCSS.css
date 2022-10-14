@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root{
+    --Charlotte: #B6EEF8;
+    --Alabaster: #FCFCFC;
+    --Razzmatazz: #DE024F;
+    --FrenchRose: #F0417C;
+    --Foam: #D7F6FC;
+    --JaggedIce:#C0E2E9;
+    --Blush: #B9437B;
+    --Amour: #F5DFEA;
+    --CeriseRed:#E53672;
+    --BlackPearl: #061631;
+    --Spray: #88dfee;
+    --Iceberg: #CDEAEF;
+
+
+    --Bordeaux: #a61b37;
+    --Rose: #ff0266;
+    --Rose60: #d6014f;
+    --EasternBlue: #1E81B0;
+    --Glacier: #76B5C5;
+
+    --DarkGrey: #121212;
+    --Grey: #242424;
+    --LimedSpruce: #364A4A;
+    --GreenWaterloo: #101405;
+
+    --shadow: #00000033;
+
+    
+}
+
+.light-theme{
+    --task-category:var(--Charlotte);
+    --task-main-bg: var(--Alabaster);
+
+    --categoryButton: var(--Razzmatazz);
+    --categoryButtonHover:var(--FrenchRose);
+    --categoryButtonFocus: var(--FrenchRose);
+    --categoryButtonText: var(--Foam);
+    --categoryButtonTextHover: var(--JaggedIce);
+    --categoryButtonTextFoucs: var(--JaggedIce);
+
+    --viewButtonSelectedBG: var(--Alabaster);
+    --viewButtonSelectedText: var(--Blush);
+    --viewButtonHoverBG: var(--Amour);
+    --viewButtonHoverText: var(--CeriseRed);
+    --viewButtonBG: var(--CeriseRed);
+    --viewButtonText: var(--Amour);
+
+    --sectionText: var(--Razzmatazz);
+
+    --taskBorder: var(--BlackPearl);
+    --taskText: var(--BlackPearl);
+
+    --createTaskButtonBG: var(--Spray);
+    --createTaskButtonText: var(--CeriseRed);
+    --createTaskButtonHoverBG: var(--Iceberg);
+    --creatTaskButtonTextHover: var(--CeriseRed);
+
+    --popupBG: var(--Alabaster);
+    --popupCloseBG: var(--Razzmatazz);
+    --formHeader: var(--CeriseRed);
+    --inputLabelColour: var(--CeriseRed);
+    --inputBG: var(--Foam);
+    --inputBorder: var(--EasternBlue);
+    --submitButton: var(--EasternBlue);
+    --submitButtonText: var(--Alabaster);
+
+    --boxShadow: var(--shadow);
+
+
+}
+
+.dark-theme{
+    --task-category:var(--Grey);
+    --task-main-bg: var(--DarkGrey);
+
+    --categoryButton: var(--Bordeaux);
+    --categoryButtonHover:var(--Rose60);
+    --categoryButtonFocus: var(--Rose60);
+    --categoryButtonText: var(--Foam);
+    --categoryButtonTextHover: var(--JaggedIce);
+    --categoryButtonTextFoucs: var(--JaggedIce);
+
+    --viewButtonSelectedBG: var(--DarkGrey);
+    --viewButtonSelectedText: var(--Blush);
+    --viewButtonHoverBG: var(--Rose60);
+    --viewButtonHoverText: var(--Amour);
+    --viewButtonBG: var(--Bordeaux);
+    --viewButtonText: var(--Amour);
+
+    --sectionText: var(--Razzmatazz);
+
+    --taskBorder: var(--Alabaster);
+    --taskText: var(--Alabaster);
+
+    --createTaskButtonBG: var(--EasternBlue);
+    --createTaskButtonText: var(--Amour);
+    --createTaskButtonHoverBG: var(--Glacier);
+    --creatTaskButtonTextHover: var(--CeriseRed);
+
+    --popupBG: var(--DarkGrey16);
+    --popupCloseBG: var(--Bordeaux);
+    --formHeader: var(--CeriseRed);
+    --inputLabelColour: var(--CeriseRed);
+    --inputBG: var(--Glacier);
+    --inputBorder: var(--EasternBlue);
+    --submitButton: var(--EasternBlue);
+    --submitButtonText: var(--Alabaster);
+
+    --boxShadow: var(--Alabaster);
+
+}
+
+/*Sets the size of the page*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/*Sets up the layout of the page*/
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+/*The layout of the page after the header*/
+.layout{
+  background-color: #ffffff;
+  flex-grow : 1;
+  margin-top: 153px;
+}
+
+/*The container for the task category*/
+.task-category{
+    width: 250px;
+    height: 100%;
+    background-color: var(--task-category);
+    float: left;
+    z-index: 999;
+}
+
+/*The container for the user tasks of the selected category*/
+.tasklist-main{
+    background-color: var(--task-main-bg);
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+
+/*The container for the title of the container*/
+#container-title{
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: var(--task-category);
+    text-align: center;
+    color: var(--Razzmatazz);
+}
+
+/*The styles the title page*/
+.homepage-tite{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*The styles the category buttons*/
+.category-button{
+    background-color:  var(--categoryButton);
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    color:var(--categoryButtonText);
+    outline: none;
+    border: none;
+}
+
+.category-button:hover{
+    background-color: var(--categoryButtonHover);
+    color:var(--categoryButtonTextHover);
+}
+
+
+/*The styles the category button when clicked*/
+.category-button:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: var(--categoryButtonFocus);
+    color:var(--categoryButtonTextHover);
+}
+
+/*The styles the personal category button when clicked*/
+#personal-category:focus{
+    border: none;
+    outline: none;
+}
+.cat{
+    width: 100%;
+    display: block;
+}
+/*The styles the personal category button*/
+
+
+/*Container for the view buttons*/
+.task-view{
+    display: flex;
+
+}
+
+
+/*Changes the style of the view button when clicked*/
+.change-view.selected{
+    outline: none;
+    background-color: var(--viewButtonSelectedBG);
+    color: var(--viewButtonSelectedText);
+}
+
+/*Changes the style of the view button when hovering*/
+.change-view:hover{
+    outline: none;
+    background-color:  var(--viewButtonHoverBG);
+    color: var(--viewButtonHoverText);
+}
+
+/*Changes the style of the buttons*/
+.change-view{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: var(--viewButtonBG);
+    padding: 14px 28px;
+    cursor: pointer;
+    text-align: center;
+    height: 70px;
+    color: var(--viewButtonText);
+    font-weight: bold;
+    font-size: 25px;
+    flex:1;
+}
+
+
+/*The class styles to hide the content*/
+.none{
+    display:none;
+}
+
+/*The class styles to show the content*/
+.block{
+    display: block;
+}
+
+/*Style the category section title*/
+.section-title{
+    text-align: center;
+    font-weight: 700;
+    color: var(--sectionText);
+    margin-top: 5px;
+    margin-bottom: 15px;  
+}
+
+/*The container for task in the list view*/
+.todo-list{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+
+.task-item{
+    margin-bottom: 10px;
+    width:100%;
+    align-items: center;
+    border: 2px solid var(--taskBorder);
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 60px;
+    color: var(--taskText);
+  
+}
+
+.task-title{
+    font-size: 25px;
+    display: block;
+    font-weight: 700;
+    
+    
+}
+
+.task-description{
+    font-size: 14px;
+    display: block;
+    
+}  
+
+
+.right{
+    float: right;
+}
+
+.task-date{
+    float: right;
+}
+
+.task-done{
+    clear: right;
+    float: right;
+    border: none;
+    cursor: pointer;
+    background: inherit;
+    color: var(--taskText);
+    
+}
+
+
+
+.button-container{
+    position:absolute; 
+    top:230px; 
+    right:0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.create-task{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--createTaskButtonBG);
+    border: none;
+    color: var(--createTaskButtonText);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.create-task:hover{
+    background-color: var(--createTaskButtonHoverBG);
+    border: none;
+    color:var(--createTaskButtonTextHover);
+    cursor: pointer;
+}
+
+.popup-overlay{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: black;
+    opacity: 0.5;
+    display: none;
+}
+
+.popup{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 450px;
+    background-color: var(--popupBG);
+    z-index: 99999;
+    box-shadow: 4px 4px 2px #0a0a0a;
+}
+
+.popup .popup-close{
+    position: absolute;
+    top: -10px;
+    right: -16px;
+    height: 40px;
+    width: 40px;
+    background: var(--popupCloseBG);
+    color: var(--popupBG);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup .form{
+    margin: 30px 0px 20px;
+}
+
+.popup .form .form-header{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    color:var(--formHeader);
+    margin: 20px 0px;
+}
+
+.popup .form .element{
+    padding: 8px 20px;
+
+}
+
+.form{
+    
+}
+
+.input-label{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--inputLabelColour);
+    margin-bottom: 5px;
+}
+
+.addtask-input{
+    width: 100%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid var(--inputBorder);
+    background: var(--inputBG);
+    border-radius: 5px;
+}
+
+#addtask-description{
+    width:100%;
+    resize: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--inputBorder);
+    background: var(--inputBG);
+}
+
+.submit-task{
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--submitButton);
+    color:var(--submitButtonText);
+}
+
+.board-tasks{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    margin-top: 0px;
+    
+}
+
+.board{
+    box-shadow: 0 4px 8px 0 var(--boxShadow);
+    width: 90%;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 20px 20px 5px 20px;
+    margin-bottom: 10px;
+    border: 2px solid var(--taskBorder);
+    color: var(--taskText);
+    overflow: hidden;
+
+}
+
+.task-titleB{
+    font-size: 30px;
+    font-weight: 700;
+    
+   
+}
+.task-descriptionB{
+    font-size: 20px;
+    
+}
+
+.rightB{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+.task-dateB{
+    font-size: 14px;
+    
+
+    /*margin-top: 15px;*/
+}
+
+.task-doneB{
+    border: none;
+    cursor: pointer;
+    float: right;
+    background-color: inherit;
+    color: var(--taskText);
+    
+}
+
+.task-delete{
+    clear: right;
+    float: right;
+    border: none;
+    cursor: pointer;
+    background: inherit;
+    color: var(--taskText);
+    
+
+}
+
+.task-deleteB{
+    border: none;
+    cursor: pointer;
+    float: right;
+    background-color: inherit;
+    color: var(--taskText);
+    
+}

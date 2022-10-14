@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root{
+    --Charlotte: #B6EEF8;
+    --Alabaster: #FCFCFC;
+    --Razzmatazz: #DE024F;
+    --FrenchRose: #F0417C;
+    --Foam: #D7F6FC;
+    --JaggedIce:#C0E2E9;
+    --Blush: #B9437B;
+    --Amour: #F5DFEA;
+    --CeriseRed:#E53672;
+    --BlackPearl: #061631;
+    --Spray: #88dfee;
+    --Iceberg: #CDEAEF;
+
+
+    --Bordeaux: #a61b37;
+    --Rose: #ff0266;
+    --Rose60: #d6014f;
+    --EasternBlue: #1E81B0;
+    --Glacier: #76B5C5;
+
+    --DarkGrey: #121212;
+    --Grey: #242424;
+    --LimedSpruce: #364A4A;
+    --GreenWaterloo: #101405;
+
+ 
+
+
+    
+}
+
+.light-theme{
+    --task-category:var(--Charlotte);
+    --task-main-bg: var(--Alabaster);
+
+    --categoryButton: var(--Razzmatazz);
+    --categoryButtonHover:var(--FrenchRose);
+    --categoryButtonFocus: var(--FrenchRose);
+    --categoryButtonText: var(--Foam);
+    --categoryButtonTextHover: var(--JaggedIce);
+    --categoryButtonTextFoucs: var(--JaggedIce);
+
+    --sectionText: var(--Razzmatazz);
+
+    --taskBorder: var(--BlackPearl);
+    --taskText: var(--BlackPearl);
+
+
+}
+
+.dark-theme{
+    --task-category:var(--Grey);
+    --task-main-bg: var(--DarkGrey);
+
+    --categoryButton: var(--Bordeaux);
+    --categoryButtonHover:var(--Rose60);
+    --categoryButtonFocus: var(--Rose60);
+    --categoryButtonText: var(--Foam);
+    --categoryButtonTextHover: var(--JaggedIce);
+    --categoryButtonTextFoucs: var(--JaggedIce);
+
+
+    --sectionText: var(--Razzmatazz);
+
+    --taskBorder: var(--Alabaster);
+    --taskText: var(--Alabaster);
+
+}
+
+/*Sets the size of the page*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/*Sets up the layout of the page*/
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+/*The layout of the page after the header*/
+.layout{
+  background-color: #ffffff;
+  flex-grow : 1;
+  margin-top: 153px;
+}
+
+/*The container for the task category*/
+.task-category{
+    width: 250px;
+    height: 100%;
+    background-color: var(--task-category);
+    float: left;
+    z-index: 999;
+}
+
+/*The container for the user tasks of the selected category*/
+.tasklist-main{
+    background-color: var(--task-main-bg);
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+
+/*The container for the title of the container*/
+#container-title{
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: var(--task-category);
+    text-align: center;
+    color: var(--Razzmatazz);
+}
+
+/*The styles the title page*/
+.homepage-tite{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/*The styles the category buttons*/
+.category-button{
+    background-color: var(--categoryButton);
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    color:var(--categoryButtonText);
+    outline: none;
+    border: none;
+}
+
+.category-button:hover{
+    background-color: var(--categoryButtonHover);
+    color:var(--categoryButtonTextHover);
+}
+
+/*The styles the category button when clicked*/
+.category-button:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: var(--categoryButtonFocus);
+    color:var(--categoryButtonTextHover);
+}
+
+.cat{
+    width: 100%;
+    display: block;
+}
+
+
+/*The class styles to hide the content*/
+.none{
+    display:none;
+}
+
+/*The class styles to show the content*/
+.block{
+    display: block;
+}
+
+/*Style the category section title*/
+.section-title{
+    text-align: center;
+    font-weight: 700;
+    color: var(--sectionText);
+    margin-top: 5px;
+    margin-bottom: 15px;  
+}
+
+.notifications{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    margin-top: 0px;
+    
+}
+
+.noti{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 90%;
+    height: 200px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 20px 20px 5px 20px;
+    margin-bottom: 10px;
+    border: 2px solid var(--taskBorder);
+    color: var(--taskText);
+}
+
+.task-title{
+    font-size: 30px;
+    font-weight: 700;
+   
+}
+
+.task-daysLeft{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.task-description{
+    font-size: 20px;
+}
+
+.task-date{
+    font-size: 14px;
+}

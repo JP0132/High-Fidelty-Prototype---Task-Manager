@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Task Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../CSS/MainCSS.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/SettingsCSS.css">
+        <script src="https://kit.fontawesome.com/ec00a021e5.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="light-theme">
+        <div class="main">
+            <div class="header">
+                <div class="header-name">
+                    <img src="../Images/logo_light.png" alt="Logo" id="logo-image">
+                </div>
+                <div class="topnav" id="navbar">
+                    <a href="../HTML Pages/Index.html" id="home-tab" class="nav-item"><i class=" itemIcon fas fa-home"></i>Home</a>
+                    <a href="../HTML Pages/TaskList.html" id="task-tab" class="nav-item"><i class=" itemIcon fas fa-tasks"></i>Task List</a>
+                    <a href="../HTML Pages/NotificationPage.html" class="nav-item"><i class=" itemIcon fas fa-bell"></i>Notification</a>
+                    <a href="../HTML Pages/ProfilePage.html" class="nav-item"><i class=" itemIcon fas fa-user"></i>Profile</a>
+                    <a href="../HTML Pages/SettingsPage.html" class="nav-item"><i class=" itemIcon fas fa-cog"></i>Settings</a>
+                    <a href="../HTML Pages/LoginPage.html" class="nav-item" id="nav-login">Login</a>
+                    <a href="javascript:void(0)" class="icon" onclick="navhamburger()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="account-settings">
+                    <h2 class="settingHeadings">Account Settings</h2>
+                    <div class="FA-switch-container">
+                        <label class="FA-switch">
+                            <input type="checkbox" id="fa-toggle">
+                            <div class="fa-slider fa-round"></div>
+                        </label>
+                    </div>
+                    <div class="FA">
+                        <div class="FA-top">
+                            <h4 id="TwoFA">Two-Factor Authentication</h4>
+                            <button id="enabler">Disabled</button>
+                            <p id="FA-text">Add another layer of protection on your account by authentication via text message</p>
+                        </div> 
+                        
+         
+                    </div>
+                
+            
+                </div>
+
+                <div class="theme-settings">
+                    <h2 class="settingHeadings">Theme Settings</h2>
+                    <div class="lightdarktheme-container">
+                        <h4 id="ld-text">Light and Dark theme</h4>
+                        <label class="switch">
+                            <i class = "fas fa-adjust" id="mode-icon"></i>
+                            <div id="switch-container">
+                                <input id="theme-input" type="checkbox">
+                                <span class="slider round"></span>
+                            </div>
+                        </label>
+                    </div>
+                
+                </div>
+
+                <div class="text-settings">
+                    <h2 class="settingHeadings">Text Settings</h2>
+                    <!--
+                    <div class="size-container">
+                        
+                        <button class="change-size" id="small-btn">Small</button>
+                        <button class="change-size" id="medium-btn">Medium</button>
+                        <button class="change-size" id="large-btn">Large</button>
+                    </div> 
+                    -->
+                    <div class="font-family-container">
+                        <h4 id="fontFamilyText">Font family:</h4>
+                        <select class="selectFamily" name="textfamily">
+                            <option value="Raleway">Raleway</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Georgia">Georgia</option>
+                        </select>
+                        
+                    </div>
+                </div>
+
+            </div>
+         
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../JavaScript/NavJS.js"></script>
+        <script src="../JavaScript/SettingsJS.js"></script> 
+            
+    
+    </body>
+</html>

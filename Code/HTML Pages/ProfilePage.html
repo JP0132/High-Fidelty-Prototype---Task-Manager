@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Task Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../CSS/MainCSS.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/ProfileCSS.css">
+        <script src="https://kit.fontawesome.com/ec00a021e5.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="light-theme">
+        <div class="main">
+            <div class="header">
+                <div class="header-name">
+                    <img src="../Images/logo_light.png" alt="Logo" id="logo-image">
+                </div>
+                <div class="topnav" id="navbar">
+                    <a href="../HTML Pages/Index.html" id="home-tab" class="nav-item"><i class=" itemIcon fas fa-home"></i>Home</a>
+                    <a href="../HTML Pages/TaskList.html" id="task-tab" class="nav-item"><i class=" itemIcon fas fa-tasks"></i>Task List</a>
+                    <a href="../HTML Pages/NotificationPage.html" class="nav-item"><i class=" itemIcon fas fa-bell"></i>Notification</a>
+                    <a href="../HTML Pages/ProfilePage.html" class="nav-item"><i class=" itemIcon fas fa-user"></i>Profile</a>
+                    <a href="../HTML Pages/SettingsPage.html" class="nav-item"><i class=" itemIcon fas fa-cog"></i>Settings</a>
+                    <a href="../HTML Pages/LoginPage.html" class="nav-item" id="nav-login">Login</a>
+                    <a href="javascript:void(0)" class="icon" onclick="navhamburger()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="layout">
+                <div class="profileHeader">
+                    <div class="profile-nav">
+                        <h3 id="username">Username</h3>
+                    </div> 
+                </div>
+                <h4 class="edit-title">Account Details</h4>
+                <button type="submit" class="save-details" name="submitBtn" onclick="saveUserData()">Save</button>
+                <div class="edit-grid">
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" id="fullname" class="form-in" placeholder="e.g. John Smith"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="text" id="user-email" class="form-in" placeholder="e.g. someone@example.com"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="number" id="user-phone" class="form-in" placeholder="e.g. +447000000000"/>
+                    </div>
+                        
+                    <div class="form-group">
+                        <label class="form-label">New Password</label>
+                        <input type="password" id="user-password" class="form-in" placeholder="Password"/>
+                    </div>
+                </div>
+
+            </div>
+         
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../JavaScript/NavJS.js"></script>
+        <script src="../JavaScript/ProfileJS.js"></script> 
+            
+    
+    </body>
+</html>
