@@ -13,6 +13,10 @@
 
 ## How it works and looks.  
 
+
+https://github.com/JP0132/High-Fidelty-Prototype---Task-Manager/assets/78804278/6fb2d79f-c247-4162-b4d8-c015766a9a5f
+
+
 ## How to run.  
 
 ### Prerequisites  
